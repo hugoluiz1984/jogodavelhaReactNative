@@ -101,7 +101,7 @@ function finalizarJogo(jogador) {
   function getScreenGame(){
     return (
       <>
-      <Header darkTheme={darkTheme} toggleSwitch = {toggleSwitch}/>
+      <Header darkTheme={darkTheme} toggleSwitch = {toggleSwitch} toggleLang={toggleLang} lang={lang}/>
       <Game darkTheme={darkTheme} tabuleiro={tabuleiro} jogar={jogar} setScreen={setScreen} linha={tabuleiro.linha} coluna={tabuleiro.coluna} lang={lang} />
     </>
     )
@@ -110,7 +110,7 @@ function finalizarJogo(jogador) {
   function getScreenWin(){
     return (
       <>
-      <Header darkTheme={darkTheme} toggleSwitch = {toggleSwitch}/>
+      <Header darkTheme={darkTheme} toggleSwitch = {toggleSwitch} toggleLang={toggleLang} lang={lang}/>
       <Win darkTheme={darkTheme} ganhador={ganhador} setScreen={setScreen} lang={lang} />
     </>
     )
