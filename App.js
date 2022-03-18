@@ -108,18 +108,18 @@ function finalizarJogo(jogador) {
   function getScreenGame(){
     return (
       <>
-      <Header darkTheme={darkTheme} toggleSwitch = {toggleSwitch} toggleLang={toggleLang} lang={lang} />
-      <Game darkTheme={darkTheme} 
-            tabuleiro={tabuleiro} 
-            jogar={jogar} 
-            setScreen={setScreen} 
-            linha={tabuleiro.linha} 
-            coluna={tabuleiro.coluna} 
-            lang={lang} 
-            jogadorAtual={jogadorAtual}
-            winX={winX}
-            winO={winO}
-      />
+        <Header darkTheme={darkTheme} toggleSwitch = {toggleSwitch} toggleLang={toggleLang} lang={lang} />
+        <Game darkTheme={darkTheme} 
+              tabuleiro={tabuleiro} 
+              jogar={jogar} 
+              setScreen={setScreen} 
+              linha={tabuleiro.linha} 
+              coluna={tabuleiro.coluna} 
+              lang={lang} 
+              jogadorAtual={jogadorAtual}
+              winX={winX}
+              winO={winO}
+        />
     </>
     )
   }
