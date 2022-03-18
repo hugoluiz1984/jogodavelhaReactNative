@@ -15,7 +15,14 @@ import styles from './styles';
  function Game (props) {
 
     return(
-        <>
+        <>  
+            <View style={props.darkTheme === false ? styles.inlineItemsGame : styles.inlineItemsGameBlack}>
+                <Text style={styles.subtitulo}>Jogador X - {props.winX}</Text>
+                <Text style={styles.subtitulo}>Jogador O - {props.winO}</Text>
+            </View>
+            <View style={props.darkTheme === false ? styles.inlineItemsGame : styles.inlineItemsGameBlack}>
+                {<Text style={styles.subtitulo}>Vez do {props.jogadorAtual}</Text>}
+            </View>
             <View style={props.darkTheme === false ? styles.Container : styles.ContainerBlack}>
                 <Text style={props.darkTheme === false ? styles.Titulo: styles.TituloBlack}>{props.lang === true ? pt_br[0] : eng[0]}</Text>
                 

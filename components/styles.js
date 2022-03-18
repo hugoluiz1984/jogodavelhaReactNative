@@ -80,6 +80,19 @@ import {
           justifyContent: "flex-end",
           gap: 5,
         },
+        inlineItemsGame:{
+            flexDirection:'row',
+            justifyContent: "space-around",
+            alignItems: 'center',
+            
+        },
+        inlineItemsGameBlack:{
+          flexDirection:'row',
+          justifyContent: "space-around",
+          alignItems: 'center',
+          padding:10,
+          backgroundColor:'#000000',
+        },
         inlineItems:{
           flexDirection:'row',
         },

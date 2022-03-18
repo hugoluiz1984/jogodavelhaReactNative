@@ -24,6 +24,8 @@ const App = () => {
   const [jogadasRestantes, setJogadasRestantes] = useState(0);
   const [ganhador, setGanhador] = useState('');
   const [lang, setLang] = useState(true);
+  const [winX, setWinX] = useState(0);
+  const [winO, setWinO] = useState(0);
 
   const toggleLang = () => setLang(!lang);
   const toggleSwitch = () => setDarkTheme(previousState => !previousState);
@@ -96,13 +98,28 @@ function verificarGanhador(tabuleiro,linha,coluna) {
 
 function finalizarJogo(jogador) {
   setGanhador(jogador);
+  if (jogador === 'X'){
+    setWinX(winX + 1);
+  }else if (jogador === 'O') {
+    setWinO(winO + 1);
+  }
   setScreen('win');
 }
   function getScreenGame(){
     return (
       <>
-      <Header darkTheme={darkTheme} toggleSwitch = {toggleSwitch} toggleLang={toggleLang} lang={lang}/>
-      <Game darkTheme={darkTheme} tabuleiro={tabuleiro} jogar={jogar} setScreen={setScreen} linha={tabuleiro.linha} coluna={tabuleiro.coluna} lang={lang} />
+      <Header darkTheme={darkTheme} toggleSwitch = {toggleSwitch} toggleLang={toggleLang} lang={lang} />
+      <Game darkTheme={darkTheme} 
+            tabuleiro={tabuleiro} 
+            jogar={jogar} 
+            setScreen={setScreen} 
+            linha={tabuleiro.linha} 
+            coluna={tabuleiro.coluna} 
+            lang={lang} 
+            jogadorAtual={jogadorAtual}
+            winX={winX}
+            winO={winO}
+      />
     </>
     )
   }
@@ -111,7 +128,13 @@ function finalizarJogo(jogador) {
     return (
       <>
       <Header darkTheme={darkTheme} toggleSwitch = {toggleSwitch} toggleLang={toggleLang} lang={lang}/>
-      <Win darkTheme={darkTheme} ganhador={ganhador} setScreen={setScreen} lang={lang} />
+      <Win darkTheme={darkTheme} 
+           ganhador={ganhador} 
+           setScreen={setScreen} 
+           lang={lang}             
+           winX={winX}
+           winO={winO} 
+      />
     </>
     )
   }
