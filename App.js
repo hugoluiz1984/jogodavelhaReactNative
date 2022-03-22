@@ -15,6 +15,7 @@ import Game from './components/game';
 import Win from './components/win';
 
 
+
 const App = () => {
  
   const [darkTheme, setDarkTheme] = useState(false);
@@ -93,7 +94,9 @@ function verificarGanhador(tabuleiro,linha,coluna) {
     return finalizarJogo('');
   }
   //Jogo nao finalizado
+  
   setJogadasRestantes ((jogadasRestantes - 1));
+  
 }
 
 function finalizarJogo(jogador) {
@@ -139,7 +142,7 @@ function finalizarJogo(jogador) {
     )
   }
 
-  
+
 };
 
 

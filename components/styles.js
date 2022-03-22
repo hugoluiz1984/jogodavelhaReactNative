@@ -82,13 +82,13 @@ import {
         },
         inlineItemsGame:{
             flexDirection:'row',
-            justifyContent: "space-around",
+            justifyContent: "space-evenly",
             alignItems: 'center',
             
         },
         inlineItemsGameBlack:{
           flexDirection:'row',
-          justifyContent: "space-around",
+          justifyContent: "space-evenly",
           alignItems: 'center',
           padding:10,
           backgroundColor:'#000000',
